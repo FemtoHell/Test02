@@ -23,14 +23,12 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <!-- Name Input Field -->
-
-    <!-- Underline for input -->
     <EditText
         android:id="@+id/nameInput"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="120dp"
         android:layout_marginEnd="32dp"
         android:background="@android:color/transparent"
         android:hint="Please enter your name"
@@ -39,10 +37,11 @@
         android:textColorHint="#CCFFFFFF"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titleText" />
+        app:layout_constraintTop_toBottomOf="@+id/titleText"
+        tools:ignore="VisualLintTextFieldSize" />
 
+    <!-- Underline for input -->
     <View
         android:id="@+id/inputUnderline"
         android:layout_width="0dp"
@@ -54,28 +53,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Wish Button -->
-    <androidx.cardview.widget.CardView
-        android:id="@+id/wishButtonCard"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="120dp"
-        app:cardCornerRadius="25dp"
-        app:cardBackgroundColor="#8A2BE2"
-        app:cardElevation="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
-
-    </androidx.cardview.widget.CardView>
-
+    <!-- Wish Button - Button bình thường -->
     <Button
         android:id="@+id/wishButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="76dp"
-        android:layout_marginEnd="92dp"
-
+        android:layout_marginBottom="120dp"
+        android:backgroundTint="#8A2BE2"
         android:paddingStart="32dp"
         android:paddingTop="12dp"
         android:paddingEnd="32dp"
@@ -84,17 +68,19 @@
         android:textColor="#FFFFFF"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/nameInput" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
+    <!-- ❌ Đã xóa ImageView nếu không cần thiết, hoặc giữ lại nếu cần -->
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="319dp"
-        android:layout_height="210dp"
-        android:layout_marginTop="172dp"
-        android:layout_marginEnd="20dp"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintTop_toBottomOf="@+id/inputUnderline"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/wishButton"
         app:srcCompat="@drawable/xingau2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

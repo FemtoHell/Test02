@@ -19,13 +19,12 @@ public class LuckyNumberActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.LuckyNumberActivity);
+        setContentView(R.layout.activity_luck);
 
         // Initialize views
         luckyNumberTitle = findViewById(R.id.luckyNumberTitle);
         luckyNumberDisplay = findViewById(R.id.luckyNumberDisplay);
-        shareButton = findViewById(R.id.wishButton);
-
+        shareButton = findViewById(R.id.button);
         // Get user name from intent
         Intent intent = getIntent();
         userName = intent.getStringExtra("USER_NAME");
